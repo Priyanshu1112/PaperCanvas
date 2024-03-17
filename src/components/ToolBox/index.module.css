@@ -1,0 +1,41 @@
+.toolBoxContainer {
+    @apply p-5 absolute top-1/4 left-1 lg:left-5 w-20 lg:w-64 rounded-md;
+    /* box-shadow: theme('colors.shadow1'); */
+    border: 2px solid theme('colors.border1');
+    background-color: theme('colors.background');
+
+    .toolItem {
+        @apply mb-5;
+
+        .icon{
+            color: theme('colors.text1');
+            font-size: 25px;
+        }
+
+        .toolText {
+            font-size: 14px;
+            font-weight: 600;
+            color: theme('colors.text1');
+        }
+
+        input{
+            width: 100%;
+        }
+
+        input[type="range"]{
+            accent-color: 'white',
+        }
+
+        .itemContainer {
+            @apply lg:flex lg:justify-between mt-2 items-center;
+            .colorBox {
+                @apply h-6 w-6 mr-1 mt-2 lg:mt-0 rounded-xl cursor-pointer;
+                border: 0.5px solid theme('colors.border1');
+
+                &:hover, &.active {
+                    border: 2px solid theme('colors.hover');
+                }
+            }
+        }
+    }
+}
